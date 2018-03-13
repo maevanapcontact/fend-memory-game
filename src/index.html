@@ -8,22 +8,22 @@
   </head>
   <body>
     <!-- OVERLAY -->
-    <div class="overlay hidden"></div>
+    <div class="overlay"></div>
     <!-- START POPUP -->
-    <section class="start-popup hidden">
-      <form class="start-form" action="#" method="post">
+    <section class="start-popup">
+      <form id="form-start" class="start-form" action="#" method="post">
         <!-- Players -->
         <fieldset>
           <legend>Players</legend>
-          <input type="radio" name="number-player" value="one-player">1-player
+          <input type="radio" name="number-player" value="one-player" checked>1-player
           <input type="radio" name="number-player" value="two-player">2-players
         </fieldset>
         <!-- Game type -->
         <fieldset>
           <legend>Game Type</legend>
-          <input type="radio" name="type-of-game" value="normal-game">Normal
+          <input type="radio" name="type-of-game" value="normal-game" checked>Normal
           <input type="radio" name="type-of-game" value="round-game">Rounds
-          Number of rounds: <input type="range" min="2" max="10">
+          Number of rounds: <input type="range" min="2" max="10" value="5">
         </fieldset>
         <!-- Submission -->
         <input type="submit" value="submit">
