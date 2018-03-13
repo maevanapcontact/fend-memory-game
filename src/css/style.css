@@ -5,6 +5,27 @@
   padding: 0;
 }
 
+/* MAIN HEADER */
+/* ------------------------ */
+.main-header h1 {
+  text-align: center;
+}
+
+/* INFOS */
+/* ------------------------ */
+.infos {
+  display: flex;
+  width: 90%;
+  margin: auto;
+}
+
+.infos > div {
+  width: 20%;
+  height: 20px;
+  margin: 5px;
+  border: 1px solid #000;
+}
+
 /* MAIN GRID */
 /* ------------------------ */
 .main-grid {
