@@ -13,7 +13,6 @@
   height: 100%;
   position: absolute;
   z-index: 2;
-  display: none;
 }
 
 /* START POPUP */
@@ -27,7 +26,6 @@
   transform: translate(-50%);
   border: 1px solid #000;
   z-index: 3;
-  display: none;
 }
 
 /* WIN POPUP */
@@ -41,7 +39,6 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 4;
-  display: none;
 }
 
 /* MAIN HEADER */
@@ -132,4 +129,10 @@
     width: 195px;
     height: 195px;
   }
+}
+
+/* INTERACTION */
+/* ------------------------ */
+.hidden {
+  display: none;
 }
