@@ -24,6 +24,10 @@ FORM_START.addEventListener('submit', function(event) {
   else gameType = "round";
   // Get the number of rounds
   numberRound = document.querySelector('input[type="range"]').value;
+
+  // Hide overlay and start popup
+  document.getElementById('overlay').classList.add('hidden');
+  document.getElementById('start-popup').classList.add('hidden');
 });
 
 do {
