@@ -7,6 +7,29 @@
     <title>Memory Game</title>
   </head>
   <body>
+    <!-- OVERLAY -->
+    <div class="overlay"></div>
+    <!-- START POPUP -->
+    <section class="start-popup">
+      <form class="start-form" action="#" method="post">
+        <!-- Players -->
+        <fieldset>
+          <legend>Players</legend>
+          <input type="radio" name="number-player" value="one-player">1-player
+          <input type="radio" name="number-player" value="two-player">2-players
+        </fieldset>
+        <!-- Game type -->
+        <fieldset>
+          <legend>Game Type</legend>
+          <input type="radio" name="type-of-game" value="normal-game">Normal
+          <input type="radio" name="type-of-game" value="round-game">Rounds
+          Number of rounds: <input type="range" min="2" max="10">
+        </fieldset>
+        <!-- Submission -->
+        <input type="submit" value="submit">
+        <input type="reset" value="reset">
+      </form>
+    </section>
     <!-- MAIN HEADER -->
     <header class="main-header">
       <h1>Matching Game</h1>
