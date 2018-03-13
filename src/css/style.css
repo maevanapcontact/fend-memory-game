@@ -30,6 +30,20 @@
   display: none;
 }
 
+/* WIN POPUP */
+/* ------------------------ */
+.win-popup {
+  width: 300px;
+  height: 150px;
+  border: 1px solid #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+  display: none;
+}
+
 /* MAIN HEADER */
 /* ------------------------ */
 .main-header h1 {
