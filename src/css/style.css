@@ -24,3 +24,50 @@
   height: 60px;
   border: 1px solid #f00;
 }
+
+/* MIN 480 PX */
+/* ------------------------ */
+@media screen and (min-width: 480px) {
+  /* Main Grid */
+  .main-grid {
+    width: 440px;
+    height: 440px;
+  }
+
+  .cards {
+    width: 95px;
+    height: 95px;
+  }
+}
+
+/* MIN 760 PX */
+/* ------------------------ */
+@media screen and (min-width: 760px) {
+  /* Main Grid */
+  .main-grid {
+    width: 720px;
+    height: 720px;
+    padding: 20px;
+  }
+
+  .cards {
+    width: 155px;
+    height: 155px;
+  }
+}
+
+/* MIN 1024 PX */
+/* ------------------------ */
+@media screen and (min-width: 1024px) {
+  /* Main Grid */
+  .main-grid {
+    width: 860px;
+    height: 860px;
+    padding: 20px;
+  }
+
+  .cards {
+    width: 195px;
+    height: 195px;
+  }
+}
