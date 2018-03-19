@@ -1,3 +1,7 @@
+/* Active cards */
+let activeCards = [];
+let numberActiveCards = 0;
+
 /* Function which randomly define the cards
  * get randomly the values of the gridIDs array
  * use those values as IDs for the cards elements
@@ -19,11 +23,28 @@ window.onload = function() {
 const GRID = document.getElementById('grid');
 
 GRID.addEventListener('click', function(event) {
+  /* Check if user has clicked on a back card */
   if (event.target.className === 'card-back') {
     let cardBack = event.target;
     let cardFront = event.target.nextSibling.nextSibling;
+    let parentCard = event.target.parentNode;
 
+    /* Active flip animation back to front */
     cardBack.className = 'card-back card-back-flip';
     cardFront.className = 'card-front card-front-flip';
+
+    numberActiveCards++;
+    activeCards.push(parentCard.id[0]);
+
+    /* Check if the cards matched when 2 are flipped */
+    if (numberActiveCards === 2) {
+      if(activeCards[0] === activeCards[1]) {
+        console.log('You win!');
+      } else {
+        console.log('You lose!');
+      }
+      numberActiveCards = 0;
+      activeCards = [];
+    }
   }
 });
