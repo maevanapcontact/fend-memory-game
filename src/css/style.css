@@ -97,6 +97,46 @@
   left: 0;
 }
 
+#a1 > .card-front,
+#a2 > .card-front {
+  background: url("../images/a-bread.svg") no-repeat center;
+}
+
+#b1 > .card-front,
+#b2 > .card-front {
+  background: url("../images/b-hot-tea.svg") no-repeat center;
+}
+
+#c1 > .card-front,
+#c2 > .card-front {
+  background: url("../images/c-hamburger.svg") no-repeat center;
+}
+
+#d1 > .card-front,
+#d2 > .card-front {
+  background: url("../images/d-french-fries.svg") no-repeat center;
+}
+
+#e1 > .card-front,
+#e2 > .card-front {
+  background: url("../images/e-chocolate.svg") no-repeat center;
+}
+
+#f1 > .card-front,
+#f2 > .card-front {
+  background: url("../images/f-biscuit.svg") no-repeat center;
+}
+
+#g1 > .card-front,
+#g2 > .card-front {
+  background: url("../images/g-pie.svg") no-repeat center;
+}
+
+#h1 > .card-front,
+#h2 > .card-front {
+  background: url("../images/h-cake.svg") no-repeat center;
+}
+
 /* MIN 480 PX */
 /* ------------------------ */
 @media screen and (min-width: 480px) {
