@@ -3,6 +3,9 @@ let activeCards = [];
 let parentIDs = [];
 let numberActiveCards = 0;
 
+/* Counter to win the game */
+let matchedCards = 0;
+
 /* Function which randomly define the cards
  * get randomly the values of the gridIDs array
  * use those values as IDs for the cards elements
@@ -58,6 +61,9 @@ GRID.addEventListener('click', function(event) {
           document.getElementById(parentID1).className = 'cards card-win';
           document.getElementById(parentID2).className = 'cards card-win';
         }, 700);
+
+        /* Count matched cards */
+        matchedCards++;
       } else {
         /* Return card (face down) after a while */
         setTimeout(function() {
@@ -83,6 +89,10 @@ GRID.addEventListener('click', function(event) {
       setTimeout(function() {
         document.body.style.pointerEvents = 'auto';
       }, 775);
+
+      if (matchedCards === 8) {
+        console.log('You have won the game!');
+      }
     }
   }
 });
