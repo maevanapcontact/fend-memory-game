@@ -101,6 +101,9 @@ GRID.addEventListener('click', function(event) {
   }
 });
 
-document.getElementById('reload').addEventListener('click', function() {
-  location.reload();
+/* Reload (when win the game) or reset it */
+document.body.addEventListener('click', function(event) {
+  if (event.target.id === 'reload' || event.target.id === 'reset') {
+    location.reload();
+  }
 });
