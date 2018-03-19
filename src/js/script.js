@@ -91,7 +91,11 @@ GRID.addEventListener('click', function(event) {
       }, 775);
 
       if (matchedCards === 8) {
-        console.log('You have won the game!');
+        setTimeout(function() {
+          document.getElementById('overlay').className = 'overlay';
+          document.getElementById('win-popup').className = 'win-popup';
+          document.body.style.overflow = 'hidden';
+        }, 775);
       }
     }
   }
