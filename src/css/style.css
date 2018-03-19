@@ -69,17 +69,17 @@
   position: relative;
 }
 
-/* .cards:hover {
+.cards:hover {
   cursor: pointer;
 }
 
-.cards:hover .card-back {
+.card-back-flip {
   animation: flip 0.1s ease-in forwards;
 }
 
-.cards:hover .card-front {
+.card-front-flip {
   animation: flip 0.1s 0.1s ease-out forwards reverse;
-} */
+}
 
 .card-front {
   background-color: #49adba;
