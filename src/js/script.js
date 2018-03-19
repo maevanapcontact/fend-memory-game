@@ -3,7 +3,7 @@
  * use those values as IDs for the cards elements
 */
 window.onload = function() {
-  let gridIDs = ['1a', '1b', '2a', '2b', '3a', '3b', '4a', '4b', '5a', '5b', '6a', '6b', '7a', '7b', '8a', '8b'];
+  let gridIDs = ['a1', 'a2', 'b1', 'b2', 'c1', 'c2', 'd1', 'd2', 'e1', 'e2', 'f1', 'f2', 'g1', 'g2', 'h1', 'h2'];
   let min = 0, max = 15;
   for (i = 0; i < 16; i++) {
     let randomNumber = Math.floor(Math.random() * (max - min + 1) + min);
