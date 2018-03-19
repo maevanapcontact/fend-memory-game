@@ -100,3 +100,7 @@ GRID.addEventListener('click', function(event) {
     }
   }
 });
+
+document.getElementById('reload').addEventListener('click', function() {
+  location.reload();
+});
