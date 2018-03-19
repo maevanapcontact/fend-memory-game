@@ -81,6 +81,14 @@
   animation: flip 0.1s 0.1s ease-out forwards reverse;
 }
 
+.card-back-reverse {
+  animation: flip 0.1s ease-in forwards reverse;
+}
+
+.card-front-reverse {
+  animation: flip 0.1s 0.1s ease-out forwards;
+}
+
 .card-front {
   background-color: #49adba;
   width: 100%;

@@ -1,5 +1,6 @@
 /* Active cards */
 let activeCards = [];
+let parentIDs = [];
 let numberActiveCards = 0;
 
 /* Function which randomly define the cards
@@ -31,15 +32,30 @@ GRID.addEventListener('click', function(event) {
     event.target.className = 'card-back card-back-flip';
     event.target.nextSibling.nextSibling.className = 'card-front card-front-flip';
 
+    /* Count current active cards */
     numberActiveCards++;
+    /* Keep the IDs of active cards to compare */
     activeCards.push(parentCard.id[0]);
+    parentIDs.push(parentCard.id);
 
-    /* Check if the cards matched when 2 are flipped */
+    /* When reach 2 active cards */
     if (numberActiveCards === 2) {
+      /* Set variables to style (animation) the correct cards */
+      let frontCardPath1 = '#' + parentIDs[0] + ' > .card-front';
+      let backCardPath1 = '#' + parentIDs[0] + ' > .card-back';
+      let frontCardPath2 = '#' + parentIDs[1] + ' > .card-front';
+      let backCardPath2 = '#' + parentIDs[1] + ' > .card-back';
+
+      /* Check if the cards matched when 2 are flipped */
       if(activeCards[0] === activeCards[1]) {
         console.log('You win!');
       } else {
-        console.log('You lose!');
+        setTimeout(function() {
+          document.querySelector(frontCardPath1).className = 'card-front card-front-reverse';
+          document.querySelector(backCardPath1).className = 'card-back card-back-reverse';
+          document.querySelector(frontCardPath2).className = 'card-front card-front-reverse';
+          document.querySelector(backCardPath2).className = 'card-back card-back-reverse';
+        }, 700);
       }
       numberActiveCards = 0;
       activeCards = [];
