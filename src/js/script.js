@@ -25,13 +25,11 @@ const GRID = document.getElementById('grid');
 GRID.addEventListener('click', function(event) {
   /* Check if user has clicked on a back card */
   if (event.target.className === 'card-back') {
-    let cardBack = event.target;
-    let cardFront = event.target.nextSibling.nextSibling;
     let parentCard = event.target.parentNode;
 
     /* Active flip animation back to front */
-    cardBack.className = 'card-back card-back-flip';
-    cardFront.className = 'card-front card-front-flip';
+    event.target.className = 'card-back card-back-flip';
+    event.target.nextSibling.nextSibling.className = 'card-front card-front-flip';
 
     numberActiveCards++;
     activeCards.push(parentCard.id[0]);
