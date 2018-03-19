@@ -8,7 +8,7 @@ let matchedCards = 0;
 
 /* Game's info */
 let stars = 3;
-let numberTry = 0;
+let numberTry = '';
 
 /* Function which randomly define the cards
  * get randomly the values of the gridIDs array
@@ -116,6 +116,7 @@ GRID.addEventListener('click', function(event) {
     }
 
     document.getElementById('stars').textContent = stars;
+    document.getElementById('moves').textContent = numberTry;
     document.getElementById('info-game').textContent = 'Stars = ' + stars;
   }
 });
