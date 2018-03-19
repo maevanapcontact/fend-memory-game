@@ -46,6 +46,9 @@ GRID.addEventListener('click', function(event) {
       let frontCardPath2 = '#' + parentIDs[1] + ' > .card-front';
       let backCardPath2 = '#' + parentIDs[1] + ' > .card-back';
 
+      /* Disable click events */
+      document.body.style.pointerEvents = 'none';
+
       /* Check if the cards matched when 2 are flipped */
       if(activeCards[0] === activeCards[1]) {
         console.log('You win!');
@@ -65,9 +68,15 @@ GRID.addEventListener('click', function(event) {
           document.querySelector(backCardPath2).className = 'card-back';
         }, 750);
       }
+
       numberActiveCards = 0;
       activeCards = [];
       parentIDs = [];
+
+      /* Enable click events */
+      setTimeout(function() {
+        document.body.style.pointerEvents = 'auto';
+      }, 775);
     }
   }
 });
