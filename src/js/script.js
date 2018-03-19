@@ -50,15 +50,24 @@ GRID.addEventListener('click', function(event) {
       if(activeCards[0] === activeCards[1]) {
         console.log('You win!');
       } else {
+        /* Return card (face down) after a while */
         setTimeout(function() {
           document.querySelector(frontCardPath1).className = 'card-front card-front-reverse';
           document.querySelector(backCardPath1).className = 'card-back card-back-reverse';
           document.querySelector(frontCardPath2).className = 'card-front card-front-reverse';
           document.querySelector(backCardPath2).className = 'card-back card-back-reverse';
         }, 700);
+        /* Remove the additional class for animation */
+        setTimeout(function() {
+          document.querySelector(frontCardPath1).className = 'card-front';
+          document.querySelector(backCardPath1).className = 'card-back';
+          document.querySelector(frontCardPath2).className = 'card-front';
+          document.querySelector(backCardPath2).className = 'card-back';
+        }, 750);
       }
       numberActiveCards = 0;
       activeCards = [];
+      parentIDs = [];
     }
   }
 });
