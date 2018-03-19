@@ -6,6 +6,10 @@ let numberActiveCards = 0;
 /* Counter to win the game */
 let matchedCards = 0;
 
+/* Game's info */
+let stars = 3;
+let numberTry = 0;
+
 /* Function which randomly define the cards
  * get randomly the values of the gridIDs array
  * use those values as IDs for the cards elements
@@ -43,6 +47,9 @@ GRID.addEventListener('click', function(event) {
 
     /* When reach 2 active cards */
     if (numberActiveCards === 2) {
+      /* Count number tries */
+      numberTry++;
+
       /* Set variables to style (animation) the correct cards */
       let frontCardPath1 = '#' + parentIDs[0] + ' > .card-front';
       let backCardPath1 = '#' + parentIDs[0] + ' > .card-back';
@@ -98,6 +105,18 @@ GRID.addEventListener('click', function(event) {
         }, 775);
       }
     }
+
+    /* Star counting */
+    if (numberTry <= 8) {
+      stars = 3;
+    } else if (numberTry > 8 && numberTry <= 15) {
+      stars = 2;
+    } else {
+      stars = 1;
+    }
+
+    document.getElementById('stars').textContent = stars;
+    document.getElementById('info-game').textContent = 'Stars = ' + stars;
   }
 });
 
