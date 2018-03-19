@@ -51,7 +51,13 @@ GRID.addEventListener('click', function(event) {
 
       /* Check if the cards matched when 2 are flipped */
       if(activeCards[0] === activeCards[1]) {
-        console.log('You win!');
+        /* Start winning animation after a while */
+        let parentID1 = parentIDs[0];
+        let parentID2 = parentIDs[1];
+        setTimeout(function() {
+          document.getElementById(parentID1).className = 'cards card-win';
+          document.getElementById(parentID2).className = 'cards card-win';
+        }, 700);
       } else {
         /* Return card (face down) after a while */
         setTimeout(function() {

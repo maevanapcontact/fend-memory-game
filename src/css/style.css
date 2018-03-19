@@ -13,9 +13,9 @@
 }
 
 @keyframes win {
-  0% { background-color: #373737; }
-  50% { background-color: #9fe269; }
-  100% { background-color: #83bb55; }
+  0% { box-shadow: inset 0 0 0 0 #373737; }
+  50% { box-shadow: inset 4px 4px 4px 4px #373737; }
+  100% { box-shadow: inset 2px 2px 2px 2px #373737; }
 }
 
 /* WIN POPUP */
@@ -96,7 +96,7 @@
 }
 
 .card-win {
-  animation: win 0.5s ease forwards; 
+  border: 5px solid green;
 }
 
 .card-front {
