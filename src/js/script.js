@@ -143,7 +143,8 @@ GRID.addEventListener('click', function(event) {
 
     document.getElementById('visual-stars').textContent = stars;
     document.getElementById('visual-moves').textContent = numberTry;
-    document.getElementById('info-game').textContent = 'Stars = ' + stars + ', Time = ' + minutes + ' : ' + seconds;
+    document.getElementById('info-game').textContent = 'Stars: ' + stars + ' | Moves: ' + numberTry;
+    document.getElementById('timer-game').textContent = 'Time: ' + minutes + ' min ' + seconds + ' s';
   }
 });
 

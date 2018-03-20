@@ -34,7 +34,8 @@ body {
 
 /* START GAME POPUP */
 /* ------------------------ */
-.start-game-popup {
+.start-game-popup,
+.win-popup {
   text-align: center;
   width: 300px;
   height: 150px;
@@ -52,7 +53,8 @@ body {
   z-index: 4;
 }
 
-.start-game-popup button {
+.start-game-popup button,
+.win-popup button {
   margin: 20px;
   padding: 10px 20px;
   border-left: 20px solid #938884;
@@ -67,7 +69,8 @@ body {
   box-shadow: 0 2px 10px #231f1c;
 }
 
-.start-game-popup button:hover {
+.start-game-popup button:hover,
+.win-popup button:hover {
   cursor: pointer;
   background: #4e4c44;
 }
@@ -75,14 +78,7 @@ body {
 /* WIN POPUP */
 /* ------------------------ */
 .win-popup {
-  width: 300px;
-  height: 150px;
-  border: 1px solid #000;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 4;
+  height: 185px;
 }
 
 /* MAIN HEADER */
