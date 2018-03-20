@@ -25,7 +25,7 @@ body {
 /* OVERLAY */
 /* ------------------------ */
 .overlay {
-  background: #3b1c08;
+  background: #292824;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -38,12 +38,12 @@ body {
   text-align: center;
   width: 300px;
   height: 150px;
-  border: 10px solid #59544e;
+  border: 10px solid #938884;
   border-radius: 10px;
   padding: 15px 8px 8px 8px;
-  background: #baa47d;
+  background: linear-gradient(to bottom right, #d52821, #f0a71d);
   box-shadow: 0 0 30px #231f1c;
-  color: #462c1b;
+  color: #292824;
   text-transform: uppercase;
   position: absolute;
   top: 50%;
@@ -55,13 +55,13 @@ body {
 .start-game-popup button {
   margin: 20px;
   padding: 10px 20px;
-  border-left: 20px solid #59544e;
-  border-right: 20px solid #59544e;
-  border-top: 8px solid #59544e;
-  border-bottom: 8px solid #59544e;
+  border-left: 20px solid #938884;
+  border-right: 20px solid #938884;
+  border-top: 8px solid #938884;
+  border-bottom: 8px solid #938884;
   border-radius: 10px;
-  background: #baa47d;
-  color: #462c1b;
+  background: #292824;
+  color: #bea77e;
   font-weight: bold;
   text-transform: uppercase;
   box-shadow: 0 2px 10px #231f1c;
@@ -69,7 +69,7 @@ body {
 
 .start-game-popup button:hover {
   cursor: pointer;
-  background: #f0d689;
+  background: #4e4c44;
 }
 
 /* WIN POPUP */
