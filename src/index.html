@@ -2,8 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memory Game</title>
   </head>
   <body>
@@ -26,17 +28,26 @@
     </header>
     <!-- SECTION: INFOS -->
     <section class="infos">
-      <!-- Stars -->
-      <div class="stars" id="stars"></div>
-      <!-- Moves -->
-      <div class="moves" id="moves"></div>
+      <!-- user play infos -->
+      <div class="user-play-infos">
+        <!-- Stars -->
+        <div class="stars" id="stars">
+          <i class="fas fa-heart"></i>
+          <p id="visual-stars">3</p>
+        </div>
+        <!-- Moves -->
+        <div class="moves" id="moves">
+          <i class="fas fa-hashtag"></i>
+          <p id="visual-moves">0</p>
+        </div>
+        <!-- Timer -->
+        <div class="timer">
+          <p id="visual-timer">0 : 0</p>
+        </div>
+      </div>
       <!-- Reset -->
       <div class="reset">
         <button id="reset">Reset</button>
-      </div>
-      <!-- Timer -->
-      <div class="timer">
-        <p id="visual-timer"></p>
       </div>
     </section>
     <!-- MAIN GRID -->

@@ -141,8 +141,8 @@ GRID.addEventListener('click', function(event) {
       stars = 1;
     }
 
-    document.getElementById('stars').textContent = stars;
-    document.getElementById('moves').textContent = numberTry;
+    document.getElementById('visual-stars').textContent = stars;
+    document.getElementById('visual-moves').textContent = numberTry;
     document.getElementById('info-game').textContent = 'Stars = ' + stars + ', Time = ' + minutes + ' : ' + seconds;
   }
 });
