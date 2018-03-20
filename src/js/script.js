@@ -1,3 +1,28 @@
+/* Manage the timer when starting the game */
+const START_GAME_BTN = document.getElementById('start-game-btn');
+const VISUAL_TIMER = document.getElementById('visual-timer');
+let seconds = 0;
+let minutes = 0;
+
+START_GAME_BTN.addEventListener('click', function() {
+  /* Run the timer while the game isn't finished */
+  timer = setInterval(function() {
+    seconds++;
+    if (seconds >= 60) {
+      seconds = 0;
+      minutes++;
+    }
+    if (minutes >= 60) {
+      VISUAL_TIMER.textContent = 'More than an hour...';
+      clearInterval(timer);
+    }
+    VISUAL_TIMER.textContent = minutes + ' : ' + seconds;
+  }, 1000);
+
+  document.getElementById('overlay').className = 'overlay hidden';
+  document.getElementById('start-game-popup').className = 'start-game-popup hidden';
+});
+
 /* Active cards */
 let activeCards = [];
 let parentIDs = [];
@@ -99,6 +124,7 @@ GRID.addEventListener('click', function(event) {
 
       if (matchedCards === 8) {
         setTimeout(function() {
+          clearInterval(timer);
           document.getElementById('overlay').className = 'overlay';
           document.getElementById('win-popup').className = 'win-popup';
           document.body.style.overflow = 'hidden';
@@ -117,7 +143,7 @@ GRID.addEventListener('click', function(event) {
 
     document.getElementById('stars').textContent = stars;
     document.getElementById('moves').textContent = numberTry;
-    document.getElementById('info-game').textContent = 'Stars = ' + stars;
+    document.getElementById('info-game').textContent = 'Stars = ' + stars + ', Time = ' + minutes + ' : ' + seconds;
   }
 });
 
