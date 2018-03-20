@@ -92,7 +92,7 @@ GRID.addEventListener('click', function(event) {
         setTimeout(function() {
           document.getElementById(parentID1).className = 'cards card-win';
           document.getElementById(parentID2).className = 'cards card-win';
-        }, 700);
+        }, 400);
 
         /* Count matched cards */
         matchedCards++;
