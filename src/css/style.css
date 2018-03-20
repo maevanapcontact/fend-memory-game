@@ -87,14 +87,21 @@ body {
 
 /* MAIN HEADER */
 /* ------------------------ */
+.main-header {
+  padding: 20px 0 10px 0;
+}
+
 .main-header h1 {
   text-align: center;
+  color: #bea77e;
+  text-transform: uppercase;
 }
 
 /* INFOS */
 /* ------------------------ */
 .infos {
   display: flex;
+  align-items: center;
   width: 90%;
   margin: auto;
   flex-wrap: wrap;
@@ -105,8 +112,20 @@ body {
   display: flex;
 }
 
-.user-play-infos > div {
-  margin: 0 10px;
+.user-play-infos > div,
+#reset {
+  margin: 0 5px;
+  padding: 3px 10px;
+  background: #1b1a18;
+  border: 2px solid #938884;
+  border-radius: 20px;
+  color: #938884;
+  text-transform: uppercase;
+}
+
+#reset:hover {
+  cursor: pointer;
+  background: #3b3935;
 }
 
 .stars,
